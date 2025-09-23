@@ -1,0 +1,14 @@
+F:\asp-netcore-webapi\Secao 01\01_fim\MimicAPI\MimicAPI\bin\Debug\netcoreapp2.2\appsettings.Development.json
+F:\asp-netcore-webapi\Secao 01\01_fim\MimicAPI\MimicAPI\bin\Debug\netcoreapp2.2\appsettings.json
+F:\asp-netcore-webapi\Secao 01\01_fim\MimicAPI\MimicAPI\bin\Debug\netcoreapp2.2\MimicAPI.deps.json
+F:\asp-netcore-webapi\Secao 01\01_fim\MimicAPI\MimicAPI\bin\Debug\netcoreapp2.2\MimicAPI.runtimeconfig.json
+F:\asp-netcore-webapi\Secao 01\01_fim\MimicAPI\MimicAPI\bin\Debug\netcoreapp2.2\MimicAPI.runtimeconfig.dev.json
+F:\asp-netcore-webapi\Secao 01\01_fim\MimicAPI\MimicAPI\bin\Debug\netcoreapp2.2\MimicAPI.dll
+F:\asp-netcore-webapi\Secao 01\01_fim\MimicAPI\MimicAPI\bin\Debug\netcoreapp2.2\MimicAPI.pdb
+F:\asp-netcore-webapi\Secao 01\01_fim\MimicAPI\MimicAPI\obj\Debug\netcoreapp2.2\MimicAPI.csproj.AssemblyReference.cache
+F:\asp-netcore-webapi\Secao 01\01_fim\MimicAPI\MimicAPI\obj\Debug\netcoreapp2.2\MimicAPI.AssemblyInfoInputs.cache
+F:\asp-netcore-webapi\Secao 01\01_fim\MimicAPI\MimicAPI\obj\Debug\netcoreapp2.2\MimicAPI.AssemblyInfo.cs
+F:\asp-netcore-webapi\Secao 01\01_fim\MimicAPI\MimicAPI\obj\Debug\netcoreapp2.2\MimicAPI.csproj.CoreCompileInputs.cache
+F:\asp-netcore-webapi\Secao 01\01_fim\MimicAPI\MimicAPI\obj\Debug\netcoreapp2.2\MimicAPI.dll
+F:\asp-netcore-webapi\Secao 01\01_fim\MimicAPI\MimicAPI\obj\Debug\netcoreapp2.2\MimicAPI.pdb
+F:\asp-netcore-webapi\Secao 01\01_fim\MimicAPI\MimicAPI\obj\Debug\netcoreapp2.2\MimicAPI.genruntimeconfig.cache
