@@ -1,0 +1,5 @@
+Instalar -> SqlLite
+Instalar -> tool
+
+Rodar migrate -> Add-Migration BancoInicial
+Instalar no Banco -> Update-Database
