@@ -1,5 +1,6 @@
 Instalar -> SqlLite
 Instalar -> tool
+Instalar -> AutoMapper -> 9.0.0
 
 Rodar migrate -> Add-Migration BancoInicial
 Instalar no Banco -> Update-Database
