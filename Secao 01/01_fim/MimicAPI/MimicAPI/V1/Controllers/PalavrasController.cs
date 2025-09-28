@@ -1,16 +1,20 @@
 ﻿using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 using MimicAPI.Helpers;
-using MimicAPI.Models;
-using MimicAPI.Models.DTO;
-using MimicAPI.Repositories.Contracts;
+using MimicAPI.V1.Models;
+using MimicAPI.V1.Models.DTO;
+using MimicAPI.V1.Repositories.Contracts;
 using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
-using System.Linq;
 
-namespace MimicAPI.Controllers
+namespace MimicAPI.V1.Controllers
 {
-    [Route("/api/palavras")]
+    [ApiController]
+    //[Route("/api/v{version:apiVersion}/[controller]")]
+    [Route("api/[controller]")]
+    [ApiVersion("1.0", Deprecated = true)]
+    [ApiVersion("1.1")]
     public class PalavrasController : ControllerBase
     {
         private readonly IPalavraRepository _repository;
@@ -23,6 +27,8 @@ namespace MimicAPI.Controllers
         }
 
         // APP -- /api/palavras
+        [MapToApiVersion("1.0")]
+        [MapToApiVersion("1.1")]
         [HttpGet("", Name = "ObterTodas")]
         public ActionResult ObterTodas([FromQuery] PalavraUrlQuery query)
         {
@@ -37,6 +43,8 @@ namespace MimicAPI.Controllers
         }
 
         // Web -- /api/palavras/1
+        [MapToApiVersion("1.0")]
+        [MapToApiVersion("1.1")]
         [HttpGet("{id}", Name = "ObterPalavra")]
         public ActionResult Obter(int id)
         {
@@ -63,6 +71,12 @@ namespace MimicAPI.Controllers
         [HttpPost]
         public ActionResult Cadastrar([FromBody] Palavra palavra)
         {
+            if (palavra == null) return BadRequest();
+            if (!ModelState.IsValid)
+                return StatusCode(422, ModelState);  // UnprocessableEntity() não existe nessa versão;
+
+            palavra.Ativo = true;
+            palavra.Criado = DateTime.Now;
             _repository.Cadastrar(palavra);
 
             PalavraDTO palavraDTO = _mapper.Map<Palavra, PalavraDTO>(palavra);
@@ -80,7 +94,14 @@ namespace MimicAPI.Controllers
             var obj = _repository.Obter(id);
             if (obj == null) return NotFound();
 
+            if (palavra == null) return BadRequest();
+            if (!ModelState.IsValid)
+                return StatusCode(422, ModelState);
+
             palavra.Id = id;
+            palavra.Ativo = obj.Ativo;
+            palavra.Criado = obj.Criado;
+            palavra.Atualizado = DateTime.Now;
             _repository.Atualizar(palavra);
 
             PalavraDTO palavraDTO = _mapper.Map<Palavra, PalavraDTO>(palavra);
@@ -92,6 +113,7 @@ namespace MimicAPI.Controllers
         }
 
         // -- /api/palavras/1 (DELETE)
+        [MapToApiVersion("1.1")]
         [HttpDelete("{id}", Name = "ExluirPalavra")]
         public ActionResult Deletar(int id)
         {
