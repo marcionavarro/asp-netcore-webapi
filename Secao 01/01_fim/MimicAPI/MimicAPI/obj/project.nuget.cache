@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "hZVApGAlCcIJf0Wwk8kuvhTBgGIULoszMuh5xdwQ14XmeMVV6Kq8N74MGZ8iFnfEQbirwDbnq/GlTnqIVgQxlg==",
+  "dgSpecHash": "tmzdjVPrGLg4Jfqgn2a+BOwz07CoG6XfhrGHoeksf2E5UK4udIcz0nNW2fCIDCNBFShJtQGmKMc7Eop9QrUehA==",
   "success": true,
   "projectFilePath": "F:\\asp-netcore-webapi\\Secao 01\\01_fim\\MimicAPI\\MimicAPI\\MimicAPI.csproj",
   "expectedPackageFiles": [
@@ -208,6 +208,10 @@
     "C:\\Users\\saipers\\.nuget\\packages\\sqlitepclraw.lib.e_sqlite3.v110_xp\\1.1.12\\sqlitepclraw.lib.e_sqlite3.v110_xp.1.1.12.nupkg.sha512",
     "C:\\Users\\saipers\\.nuget\\packages\\sqlitepclraw.provider.e_sqlite3.netstandard11\\1.1.12\\sqlitepclraw.provider.e_sqlite3.netstandard11.1.1.12.nupkg.sha512",
     "C:\\Users\\saipers\\.nuget\\packages\\stackexchange.redis.strongname\\1.2.4\\stackexchange.redis.strongname.1.2.4.nupkg.sha512",
+    "C:\\Users\\saipers\\.nuget\\packages\\swashbuckle.aspnetcore\\4.0.1\\swashbuckle.aspnetcore.4.0.1.nupkg.sha512",
+    "C:\\Users\\saipers\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\4.0.1\\swashbuckle.aspnetcore.swagger.4.0.1.nupkg.sha512",
+    "C:\\Users\\saipers\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\4.0.1\\swashbuckle.aspnetcore.swaggergen.4.0.1.nupkg.sha512",
+    "C:\\Users\\saipers\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\4.0.1\\swashbuckle.aspnetcore.swaggerui.4.0.1.nupkg.sha512",
     "C:\\Users\\saipers\\.nuget\\packages\\system.appcontext\\4.3.0\\system.appcontext.4.3.0.nupkg.sha512",
     "C:\\Users\\saipers\\.nuget\\packages\\system.buffers\\4.5.0\\system.buffers.4.5.0.nupkg.sha512",
     "C:\\Users\\saipers\\.nuget\\packages\\system.collections\\4.3.0\\system.collections.4.3.0.nupkg.sha512",

@@ -11,8 +11,7 @@ using System.Collections.Generic;
 namespace MimicAPI.V1.Controllers
 {
     [ApiController]
-    //[Route("/api/v{version:apiVersion}/[controller]")]
-    [Route("api/[controller]")]
+    [Route("/api/v{version:apiVersion}/[controller]")]
     [ApiVersion("1.0", Deprecated = true)]
     [ApiVersion("1.1")]
     public class PalavrasController : ControllerBase
@@ -26,7 +25,11 @@ namespace MimicAPI.V1.Controllers
             _mapper = mapper;
         }
 
-        // APP -- /api/palavras
+        /// <summary>
+        /// Operação que pega do banco de dados todas as palavras existentes
+        /// </summary>
+        /// <param name="query">Filtros de pesquisa</param>
+        /// <returns>Listagem de palavras</returns>
         [MapToApiVersion("1.0")]
         [MapToApiVersion("1.1")]
         [HttpGet("", Name = "ObterTodas")]
@@ -42,7 +45,11 @@ namespace MimicAPI.V1.Controllers
             return Ok(lista);
         }
 
-        // Web -- /api/palavras/1
+        /// <summary>
+        /// Operação que pega uma unica palavra da base de dados
+        /// </summary>
+        /// <param name="id">Código identificador da palavra</param>
+        /// <returns>Um objeto palavra</returns>
         [MapToApiVersion("1.0")]
         [MapToApiVersion("1.1")]
         [HttpGet("{id}", Name = "ObterPalavra")]
@@ -66,7 +73,13 @@ namespace MimicAPI.V1.Controllers
             return Ok(palavraDTO);
         }
 
-        // -- /api/palavras (POST: id, nome, ativo, pontuacao, criacao)
+        /// <summary>
+        /// Operação que realiza o cadastro da palavra
+        /// </summary>
+        /// <param name="palavra">Um objeto palavra</param>
+        /// <returns>Um objeto palabra com seu Id</returns>
+        [MapToApiVersion("1.0")]
+        [MapToApiVersion("1.1")]
         [Route("")]
         [HttpPost]
         public ActionResult Cadastrar([FromBody] Palavra palavra)
@@ -87,7 +100,14 @@ namespace MimicAPI.V1.Controllers
             return Created($"/api/palavras/{palavra.Id}", palavra);
         }
 
-        // -- /api/palavras/1 (PUT: id, nome, ativo, pontuacao, criacao)
+        /// <summary>
+        /// Operação que realiza a substituição de dados de uma palavra especifica
+        /// </summary>
+        /// <param name="id">Código identificador da palavra a ser alterada</param>
+        /// <param name="palavra">Objeto palavra com dados para alteração</param>
+        /// <returns></returns>
+        [MapToApiVersion("1.0")]
+        [MapToApiVersion("1.1")]
         [HttpPut("{id}", Name = "AtualizarPalavra")]
         public ActionResult Atualizar(int id, [FromBody] Palavra palavra)
         {
@@ -112,7 +132,12 @@ namespace MimicAPI.V1.Controllers
             return Ok();
         }
 
-        // -- /api/palavras/1 (DELETE)
+
+        /// <summary>
+        /// Operação que desativa uma palavra do sistema.
+        /// </summary>
+        /// <param name="id">Código identificador da palavra a ser desativada</param>
+        /// <returns></returns>
         [MapToApiVersion("1.1")]
         [HttpDelete("{id}", Name = "ExluirPalavra")]
         public ActionResult Deletar(int id)
