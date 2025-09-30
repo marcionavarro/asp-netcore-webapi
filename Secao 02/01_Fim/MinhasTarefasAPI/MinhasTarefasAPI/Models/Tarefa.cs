@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace MinhasTarefasAPI.Models
 {
@@ -13,5 +14,9 @@ namespace MinhasTarefasAPI.Models
         public bool Concluido { get; set; }
         public DateTime Criado { get; set; }
         public DateTime Atualizado { get; set; }
+
+        [ForeignKey("Usuario")]
+        public string UsuarioId { get; set; }
+        public virtual ApplicationUser Usuario { get; set; }
     }
 }

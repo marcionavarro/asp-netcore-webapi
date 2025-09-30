@@ -1,0 +1,7 @@
+Instalar -> Microsoft.EntityFrameworkCore.Sqlite -> 2.2.6
+Instalar -> Microsoft.EntityFrameworkCore.Tools -> 2.2.1
+
+Rodar migrate -> Add-Migration BancoInicial
+Rodar o -> Update-Database
+
+LINQPAD -> Add connection -> IQ -> next -> SQLite -> Browser -> Pasta do banco criado
