@@ -4,6 +4,8 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using MinhasTarefasAPI.Database;
+using MinhasTarefasAPI.Repositories;
+using MinhasTarefasAPI.Repositories.Contracts;
 
 namespace MinhasTarefasAPI
 {
@@ -22,6 +24,10 @@ namespace MinhasTarefasAPI
             services.AddDbContext<MinhasTarefasContext>(op => 
                 op.UseSqlite("Data Source=Database\\MinhasTarefas.db")
             );
+            /* Repositories */
+            services.AddScoped<IUsuarioRepository, UsuarioRepository>();
+            services.AddScoped<ITarefaRepository, TarefaRepository>();
+
             services.AddMvc();
         }
 
