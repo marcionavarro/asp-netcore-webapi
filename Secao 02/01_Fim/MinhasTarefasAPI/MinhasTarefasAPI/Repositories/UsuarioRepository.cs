@@ -47,4 +47,9 @@ public class UsuarioRepository : IUsuarioRepository
             throw new Exception($"Usuário não cadastrado! { sb.ToString()}");
         }
     }
+
+    public ApplicationUser Obter(string id)
+    {
+       return _userManager.FindByIdAsync(id).Result;
+    }
 }
