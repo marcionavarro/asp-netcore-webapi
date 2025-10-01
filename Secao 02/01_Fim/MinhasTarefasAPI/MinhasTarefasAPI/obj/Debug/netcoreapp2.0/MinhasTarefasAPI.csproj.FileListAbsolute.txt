@@ -6,10 +6,13 @@ F:\asp-netcore-webapi\Secao 02\01_Fim\MinhasTarefasAPI\MinhasTarefasAPI\bin\Debu
 F:\asp-netcore-webapi\Secao 02\01_Fim\MinhasTarefasAPI\MinhasTarefasAPI\bin\Debug\netcoreapp2.0\MinhasTarefasAPI.runtimeconfig.dev.json
 F:\asp-netcore-webapi\Secao 02\01_Fim\MinhasTarefasAPI\MinhasTarefasAPI\bin\Debug\netcoreapp2.0\MinhasTarefasAPI.dll
 F:\asp-netcore-webapi\Secao 02\01_Fim\MinhasTarefasAPI\MinhasTarefasAPI\bin\Debug\netcoreapp2.0\MinhasTarefasAPI.pdb
-F:\asp-netcore-webapi\Secao 02\01_Fim\MinhasTarefasAPI\MinhasTarefasAPI\obj\Debug\netcoreapp2.0\MinhasTarefasAPI.csproj.AssemblyReference.cache
 F:\asp-netcore-webapi\Secao 02\01_Fim\MinhasTarefasAPI\MinhasTarefasAPI\obj\Debug\netcoreapp2.0\MinhasTarefasAPI.AssemblyInfoInputs.cache
 F:\asp-netcore-webapi\Secao 02\01_Fim\MinhasTarefasAPI\MinhasTarefasAPI\obj\Debug\netcoreapp2.0\MinhasTarefasAPI.AssemblyInfo.cs
 F:\asp-netcore-webapi\Secao 02\01_Fim\MinhasTarefasAPI\MinhasTarefasAPI\obj\Debug\netcoreapp2.0\MinhasTarefasAPI.csproj.CoreCompileInputs.cache
+F:\asp-netcore-webapi\Secao 02\01_Fim\MinhasTarefasAPI\MinhasTarefasAPI\obj\Debug\netcoreapp2.0\MinhasTarefasAPI.RazorAssemblyInfo.cache
+F:\asp-netcore-webapi\Secao 02\01_Fim\MinhasTarefasAPI\MinhasTarefasAPI\obj\Debug\netcoreapp2.0\MinhasTarefasAPI.RazorAssemblyInfo.cs
+F:\asp-netcore-webapi\Secao 02\01_Fim\MinhasTarefasAPI\MinhasTarefasAPI\obj\Debug\netcoreapp2.0\MinhasTarefasAPI.RazorTargetAssemblyInfo.cache
 F:\asp-netcore-webapi\Secao 02\01_Fim\MinhasTarefasAPI\MinhasTarefasAPI\obj\Debug\netcoreapp2.0\MinhasTarefasAPI.dll
 F:\asp-netcore-webapi\Secao 02\01_Fim\MinhasTarefasAPI\MinhasTarefasAPI\obj\Debug\netcoreapp2.0\MinhasTarefasAPI.pdb
 F:\asp-netcore-webapi\Secao 02\01_Fim\MinhasTarefasAPI\MinhasTarefasAPI\obj\Debug\netcoreapp2.0\MinhasTarefasAPI.genruntimeconfig.cache
+F:\asp-netcore-webapi\Secao 02\01_Fim\MinhasTarefasAPI\MinhasTarefasAPI\obj\Debug\netcoreapp2.0\MinhasTarefasAPI.csproj.AssemblyReference.cache

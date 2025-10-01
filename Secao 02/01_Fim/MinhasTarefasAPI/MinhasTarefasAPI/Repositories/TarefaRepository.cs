@@ -22,7 +22,7 @@ namespace MinhasTarefasAPI.Repositories
      
             if (dataUltimaSincronizacao != null)
             {
-                query.Where(a => a.Criado >= dataUltimaSincronizacao || a.Atualizado >= dataUltimaSincronizacao);
+                query = query.Where(a => a.Criado >= dataUltimaSincronizacao || a.Atualizado >= dataUltimaSincronizacao);
             }
 
             return query.ToList<Tarefa>();
@@ -30,7 +30,9 @@ namespace MinhasTarefasAPI.Repositories
 
         public List<Tarefa> Sincronizacao(List<Tarefa> tarefas)
         {
-            var tarefasNovas = tarefas.Where(a => a.IdTarefaApi == 0);
+            var tarefasNovas = tarefas.Where(a => a.IdTarefaApi == 0).ToList();
+            var tarefasExcluidasAtualizadas = tarefas.Where(a => a.IdTarefaApi != 0).ToList();
+
             // Cadastrar novos registros
             if (tarefasNovas.Count() > 0) 
             {
@@ -39,8 +41,7 @@ namespace MinhasTarefasAPI.Repositories
                     _banco.Tarefas.Add(tarefa);
                 }
             }
-
-            var tarefasExcluidasAtualizadas = tarefas.Where(a => a.IdTarefaApi != 0);
+            
             // Atualização de registro (Excluido)
             if (tarefasExcluidasAtualizadas.Count() > 0)
             {

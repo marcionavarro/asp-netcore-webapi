@@ -157,21 +157,23 @@ namespace MinhasTarefasAPI.Migrations
                 name: "Tarefas",
                 columns: table => new
                 {
-                    Id = table.Column<int>(nullable: false)
+                    IdTarefaApi = table.Column<int>(nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
+                    idTarefaApp = table.Column<int>(nullable: false),
                     Titulo = table.Column<string>(nullable: true),
                     DataHora = table.Column<DateTime>(nullable: false),
                     Local = table.Column<string>(nullable: true),
                     Descricao = table.Column<string>(nullable: true),
                     Tipo = table.Column<string>(nullable: true),
                     Concluido = table.Column<bool>(nullable: false),
+                    Excluido = table.Column<bool>(nullable: false),
                     Criado = table.Column<DateTime>(nullable: false),
                     Atualizado = table.Column<DateTime>(nullable: false),
                     UsuarioId = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Tarefas", x => x.Id);
+                    table.PrimaryKey("PK_Tarefas", x => x.IdTarefaApi);
                     table.ForeignKey(
                         name: "FK_Tarefas_AspNetUsers_UsuarioId",
                         column: x => x.UsuarioId,

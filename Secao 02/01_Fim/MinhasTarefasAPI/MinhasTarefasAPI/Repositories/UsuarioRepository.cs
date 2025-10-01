@@ -16,7 +16,7 @@ public class UsuarioRepository : IUsuarioRepository
 
     public ApplicationUser Obter(string email, string senha)
     {
-        var usuario = _userManager.FindByIdAsync(email).Result;
+        var usuario = _userManager.FindByEmailAsync(email).Result;
         if (_userManager.CheckPasswordAsync(usuario, senha).Result)
         {
             return usuario;
