@@ -9,6 +9,7 @@ using MinhasTarefasAPI.Database;
 using MinhasTarefasAPI.Models;
 using MinhasTarefasAPI.Repositories;
 using MinhasTarefasAPI.Repositories.Contracts;
+using System.Threading.Tasks;
 
 namespace MinhasTarefasAPI
 {
@@ -42,6 +43,13 @@ namespace MinhasTarefasAPI
             services.AddIdentity<ApplicationUser, IdentityRole<string>>()
                 .AddEntityFrameworkStores<MinhasTarefasContext>()
                 .AddDefaultTokenProviders();
+
+            services.ConfigureApplicationCookie(options => { 
+                options.Events.OnRedirectToLogin = context => {
+                    context.Response.StatusCode = 401;
+                    return Task.CompletedTask;
+                };
+            });
 
         }
 
