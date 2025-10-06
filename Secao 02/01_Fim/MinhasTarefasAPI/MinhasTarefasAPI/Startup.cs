@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Formatters;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -29,7 +30,8 @@ namespace MinhasTarefasAPI
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.Configure<ApiBehaviorOptions>(op => {
+            services.Configure<ApiBehaviorOptions>(op =>
+            {
                 op.SuppressModelStateInvalidFilter = true;
             });
             services.AddDbContext<MinhasTarefasContext>(op =>
@@ -40,20 +42,27 @@ namespace MinhasTarefasAPI
             services.AddScoped<ITarefaRepository, TarefaRepository>();
             services.AddScoped<ITokenRepository, TokenRepository>();
 
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_0)
-                .AddJsonOptions(options => 
-                options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore
+            services.AddMvc(config =>
+            {
+                config.ReturnHttpNotAcceptable = true; // 406
+                config.InputFormatters.Add(new XmlSerializerInputFormatter()); 
+                config.OutputFormatters.Add(new XmlSerializerOutputFormatter());
+            }).SetCompatibilityVersion(CompatibilityVersion.Version_2_0)
+            .AddJsonOptions(options =>
+            options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore
             );
 
             services.AddIdentity<ApplicationUser, IdentityRole<string>>()
                 .AddEntityFrameworkStores<MinhasTarefasContext>()
                 .AddDefaultTokenProviders();
 
-            services.AddAuthentication(options => {
+            services.AddAuthentication(options =>
+            {
                 options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
                 options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
                 options.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;
-            }).AddJwtBearer(options => {
+            }).AddJwtBearer(options =>
+            {
                 options.TokenValidationParameters = new TokenValidationParameters()
                 {
                     ValidateIssuer = false,
@@ -64,7 +73,8 @@ namespace MinhasTarefasAPI
                 };
             });
 
-            services.AddAuthorization(auth => {
+            services.AddAuthorization(auth =>
+            {
                 auth.AddPolicy(
                     "Bearer", new AuthorizationPolicyBuilder()
                     .AddAuthenticationSchemes(JwtBearerDefaults.AuthenticationScheme)
@@ -72,8 +82,10 @@ namespace MinhasTarefasAPI
                 );
             });
 
-            services.ConfigureApplicationCookie(options => { 
-                options.Events.OnRedirectToLogin = context => {
+            services.ConfigureApplicationCookie(options =>
+            {
+                options.Events.OnRedirectToLogin = context =>
+                {
                     context.Response.StatusCode = 401;
                     return Task.CompletedTask;
                 };
