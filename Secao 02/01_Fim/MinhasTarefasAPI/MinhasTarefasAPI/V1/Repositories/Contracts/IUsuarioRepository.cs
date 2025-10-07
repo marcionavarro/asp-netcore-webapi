@@ -1,6 +1,6 @@
-﻿using MinhasTarefasAPI.Models;
+﻿using MinhasTarefasAPI.V1.Models;
 
-namespace MinhasTarefasAPI.Repositories.Contracts
+namespace MinhasTarefasAPI.Repositories.V1.Contracts
 {
     public interface IUsuarioRepository
     {

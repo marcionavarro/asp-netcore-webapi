@@ -1,18 +1,19 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
-using MinhasTarefasAPI.Models;
-using MinhasTarefasAPI.Repositories.Contracts;
+using MinhasTarefasAPI.V1.Models;
+using MinhasTarefasAPI.Repositories.V1.Contracts;
 using System;
 using System.Collections.Generic;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
 
-namespace MinhasTarefasAPI.Controllers
+namespace MinhasTarefasAPI.V1.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [ApiVersion("1.0")]
     public class UsuarioController : ControllerBase
     {
         private readonly IUsuarioRepository _usuarioRepository;
@@ -33,14 +34,14 @@ namespace MinhasTarefasAPI.Controllers
         }
 
         [HttpPost("login")]
-        public ActionResult Login([FromBody] UsuarioDTO usuarioDTO)
+        public ActionResult Login([FromBody] UsuarioInputDTO usuarioInputDTO)
         {
             ModelState.Remove("ConfirmacaoSenha");
             ModelState.Remove("Nome");
 
             if (ModelState.IsValid)
             {
-                ApplicationUser usuario = _usuarioRepository.Obter(usuarioDTO.Email, usuarioDTO.Senha);
+                ApplicationUser usuario = _usuarioRepository.Obter(usuarioInputDTO.Email, usuarioInputDTO.Senha);
                 if (usuario != null)
                 {
                     // retorna o  Token (JWT)
@@ -75,7 +76,7 @@ namespace MinhasTarefasAPI.Controllers
             return GerarToken(usuario);
         }
 
-        [HttpPost("")]
+        [HttpPost("cadastrar")]
         public ActionResult Cadastrar([FromBody] UsuarioDTO usuarioDTO)
         {
             if (ModelState.IsValid)

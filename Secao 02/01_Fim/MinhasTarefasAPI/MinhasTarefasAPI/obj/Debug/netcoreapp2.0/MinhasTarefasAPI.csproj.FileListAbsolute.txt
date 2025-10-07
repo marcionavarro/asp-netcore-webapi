@@ -6,6 +6,7 @@ F:\asp-netcore-webapi\Secao 02\01_Fim\MinhasTarefasAPI\MinhasTarefasAPI\bin\Debu
 F:\asp-netcore-webapi\Secao 02\01_Fim\MinhasTarefasAPI\MinhasTarefasAPI\bin\Debug\netcoreapp2.0\MinhasTarefasAPI.runtimeconfig.dev.json
 F:\asp-netcore-webapi\Secao 02\01_Fim\MinhasTarefasAPI\MinhasTarefasAPI\bin\Debug\netcoreapp2.0\MinhasTarefasAPI.dll
 F:\asp-netcore-webapi\Secao 02\01_Fim\MinhasTarefasAPI\MinhasTarefasAPI\bin\Debug\netcoreapp2.0\MinhasTarefasAPI.pdb
+F:\asp-netcore-webapi\Secao 02\01_Fim\MinhasTarefasAPI\MinhasTarefasAPI\bin\Debug\netcoreapp2.0\MinhasTarefasAPI.xml
 F:\asp-netcore-webapi\Secao 02\01_Fim\MinhasTarefasAPI\MinhasTarefasAPI\obj\Debug\netcoreapp2.0\MinhasTarefasAPI.AssemblyInfoInputs.cache
 F:\asp-netcore-webapi\Secao 02\01_Fim\MinhasTarefasAPI\MinhasTarefasAPI\obj\Debug\netcoreapp2.0\MinhasTarefasAPI.AssemblyInfo.cs
 F:\asp-netcore-webapi\Secao 02\01_Fim\MinhasTarefasAPI\MinhasTarefasAPI\obj\Debug\netcoreapp2.0\MinhasTarefasAPI.csproj.CoreCompileInputs.cache

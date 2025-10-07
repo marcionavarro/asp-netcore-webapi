@@ -1,11 +1,11 @@
 ﻿using MinhasTarefasAPI.Database;
-using MinhasTarefasAPI.Models;
-using MinhasTarefasAPI.Repositories.Contracts;
+using MinhasTarefasAPI.Repositories.V1.Contracts;
+using MinhasTarefasAPI.V1.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace MinhasTarefasAPI.Repositories
+namespace MinhasTarefasAPI.V1.Repositories
 {
     public class TarefaRepository : ITarefaRepository
     {

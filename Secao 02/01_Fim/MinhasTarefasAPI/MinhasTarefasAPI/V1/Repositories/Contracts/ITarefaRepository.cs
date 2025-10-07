@@ -1,8 +1,8 @@
-﻿using MinhasTarefasAPI.Models;
+﻿using MinhasTarefasAPI.V1.Models;
 using System;
 using System.Collections.Generic;
 
-namespace MinhasTarefasAPI.Repositories.Contracts
+namespace MinhasTarefasAPI.Repositories.V1.Contracts
 {
     public interface ITarefaRepository
     {

@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-using MinhasTarefasAPI.Models;
+using MinhasTarefasAPI.V1.Models;
 
 namespace MinhasTarefasAPI.Database
 {
