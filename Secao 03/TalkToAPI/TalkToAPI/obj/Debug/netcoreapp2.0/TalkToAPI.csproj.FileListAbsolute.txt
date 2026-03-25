@@ -1,0 +1,15 @@
+F:\asp-netcore-webapi\Secao 03\TalkToAPI\TalkToAPI\bin\Debug\netcoreapp2.0\appsettings.Development.json
+F:\asp-netcore-webapi\Secao 03\TalkToAPI\TalkToAPI\bin\Debug\netcoreapp2.0\appsettings.json
+F:\asp-netcore-webapi\Secao 03\TalkToAPI\TalkToAPI\bin\Debug\netcoreapp2.0\bundleconfig.json
+F:\asp-netcore-webapi\Secao 03\TalkToAPI\TalkToAPI\bin\Debug\netcoreapp2.0\TalkToAPI.deps.json
+F:\asp-netcore-webapi\Secao 03\TalkToAPI\TalkToAPI\bin\Debug\netcoreapp2.0\TalkToAPI.runtimeconfig.json
+F:\asp-netcore-webapi\Secao 03\TalkToAPI\TalkToAPI\bin\Debug\netcoreapp2.0\TalkToAPI.runtimeconfig.dev.json
+F:\asp-netcore-webapi\Secao 03\TalkToAPI\TalkToAPI\bin\Debug\netcoreapp2.0\TalkToAPI.dll
+F:\asp-netcore-webapi\Secao 03\TalkToAPI\TalkToAPI\bin\Debug\netcoreapp2.0\TalkToAPI.pdb
+F:\asp-netcore-webapi\Secao 03\TalkToAPI\TalkToAPI\obj\Debug\netcoreapp2.0\TalkToAPI.csproj.AssemblyReference.cache
+F:\asp-netcore-webapi\Secao 03\TalkToAPI\TalkToAPI\obj\Debug\netcoreapp2.0\TalkToAPI.AssemblyInfoInputs.cache
+F:\asp-netcore-webapi\Secao 03\TalkToAPI\TalkToAPI\obj\Debug\netcoreapp2.0\TalkToAPI.AssemblyInfo.cs
+F:\asp-netcore-webapi\Secao 03\TalkToAPI\TalkToAPI\obj\Debug\netcoreapp2.0\TalkToAPI.csproj.CoreCompileInputs.cache
+F:\asp-netcore-webapi\Secao 03\TalkToAPI\TalkToAPI\obj\Debug\netcoreapp2.0\TalkToAPI.dll
+F:\asp-netcore-webapi\Secao 03\TalkToAPI\TalkToAPI\obj\Debug\netcoreapp2.0\TalkToAPI.pdb
+F:\asp-netcore-webapi\Secao 03\TalkToAPI\TalkToAPI\obj\Debug\netcoreapp2.0\TalkToAPI.genruntimeconfig.cache
