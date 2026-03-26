@@ -13,3 +13,4 @@ F:\asp-netcore-webapi\Secao 03\TalkToAPI\TalkToAPI\obj\Debug\netcoreapp2.0\TalkT
 F:\asp-netcore-webapi\Secao 03\TalkToAPI\TalkToAPI\obj\Debug\netcoreapp2.0\TalkToAPI.dll
 F:\asp-netcore-webapi\Secao 03\TalkToAPI\TalkToAPI\obj\Debug\netcoreapp2.0\TalkToAPI.pdb
 F:\asp-netcore-webapi\Secao 03\TalkToAPI\TalkToAPI\obj\Debug\netcoreapp2.0\TalkToAPI.genruntimeconfig.cache
+F:\asp-netcore-webapi\Secao 03\TalkToAPI\TalkToAPI\bin\Debug\netcoreapp2.0\TalkToAPI.xml

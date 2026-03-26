@@ -1,9 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace TalkToAPI.V1.Models
 {
@@ -12,9 +9,9 @@ namespace TalkToAPI.V1.Models
         [Key]
         public int Id { get; set; }
         [ForeignKey("DeId")]
-        public AplicationUser De { get; set; }
+        public ApplicationUser De { get; set; }
         [ForeignKey("ParaId")]
-        public AplicationUser Para { get; set; }
+        public ApplicationUser Para { get; set; }
         public string DeId { get; set; }
         public string ParaId { get; set; }
         public string Texto { get; set; }
